@@ -1,0 +1,70 @@
+Jingjiao Ni
+C340 LAB1
+Exercise 1:Matlab Introduction Exercises
+	 Exiercise 1:
+	 lab1e1a.m
+
+	 The running time of the vectorized implementation is obviously faster than the orginal implement(which use for loop)
+
+	 Exercise 2:
+	 lab1e1b.m
+	 (require function file: luminance_change.m)
+
+Exercise 2:LU factorization
+	 lab1e2.m
+	 (require function files: elimMat.m
+	 	  	   	  myLU.m
+				  backSubst.m
+				  fwdSubst.m )
+
+Exercise 3: Computer tomography 
+	 a: 3*3 case
+	 lab1e3a.m
+
+	 I selected the b_1; b_3 ;b_4;b_5;b_6;b_7;b_9;b_10;b_11 and the corresponding ray to form a 9*9 matrix,and solve it get the following result
+	 1.9967    0.5267    5.4767
+         1.2867    6.1167    4.5067
+         2.7167    2.2667    8.0167
+	 
+	 And for the  \ operator part, I get the following result
+         1.4175    0.7208    5.4108
+         2.2508    7.5975    4.7008
+         1.8808    3.2308    7.4375
+
+	 I think the result using \ operator is better.For the first one,I have some other choices, and I will get different results.The 12*9  one contains more information so I think that result is better.
+
+	 b: 4*4 case
+	 lab1e3b.m
+
+	 I make the 4*4 image like this
+	 4.0000   10.0000  9.0000    8.0000
+	 4.0000   5.0000   11.0000   2.0000
+	 11.0000  7.0000   15.0000   5.0000
+	 12.0000  13.0000  6.0000    8.0000
+	 
+	 At first I make 24 rays(each ray intersect four pixel) which form a 24*16 matrix,but then I find that the rank is less than 16 so I need to find more
+	 Then I find 4 more rays(each ray intersect only 3 pixel so some pixel will nort be intersected by ray)(I can find more, but 4 is enough)
+	 Then I have a 28*16 matrix
+
+	 
+	 I select 16 rays from the 28 rays(it's hard to describe them so plz see the .m file),use LU to solve the system contain 16*16 matrix and get the following result
+	 4.0000   10.0000  9.0000    8.0000
+	 4.0000   5.0000   11.0000   2.0000
+	 11.0000  7.0000   15.0000   5.0000
+	 12.0000  13.0000  6.0000    8.0000
+	 which be excatly what it should be!!
+
+	 And for the overdetermint,I use \ operator to solve and get
+	 3.2151    9.0861   10.9967    9.3281
+	 5.1174    3.6047   11.3906    2.6595
+	 10.3405    7.8594   13.8953    7.6326
+	 11.9219   13.5033    5.6639    6.2849
+	 which is close to the real result.
+
+	 c1:
+	 lab1e3c1.m
+	 (require function file: TomographyDisp.m)
+	 
+	 The world is SCIENCE
+
+	 

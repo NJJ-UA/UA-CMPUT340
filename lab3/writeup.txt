@@ -1,0 +1,26 @@
+Jingjiao Ni
+C340 LAB3
+Exercise 1: Eigen values and vectors 
+	lab3e1.m
+	 (require function file: myPCA.m
+				 axeplot.m)
+	
+	
+Exercise 2: A moving wave image
+	lab3e2.m
+	(require function file: renderim.m)
+
+Exercise 3: Small image motion
+	lab3e3.m
+	(require function file: renderim.m)
+
+	If I pick larger Y values, we almost can not see any image motion(I did this at the last part of exercise 3 and you can check it). This is because the Taylor expansion works well when du and dv are very small. Large Y is just large du and dv so it doesn’t work. This procedure works best for image with clear edge. Image with clear edge will have meaningful gradient so the procedure works. If the image doesn’t have clear edge( a extreme example is a totally black image) will have some trival gradient(like all 0 gradient for a all black image), than we can’t see any motion, the procedure doesn’t work.
+
+Exercise 5: Combining the linear subspace B with polynomial interpolation
+	lab3e5.m (I use pause() for each step in this script)
+	(require function file: polynomial_interp.m
+				linear_interp.m
+				renderim.m)
+	
+	In general,the Y_new made by linear interpolation is much better than polynomial interpolation.
+	 The interpolation correctly recover the Y,Y_new(:,t) is very closed to the dropped Y(:,t).And the two image looks very close.

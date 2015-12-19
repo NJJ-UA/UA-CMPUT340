@@ -1,0 +1,27 @@
+Jingjiao Ni
+C340 LAB2
+Exercise 1: Polynomial interpolation/approximation 
+	lab2e1.m
+	 (require function file: polynomial_interp.m)
+	
+	if m is small, a relatively small n can make the polynomial fit
+	(for exmaple, for m=0.5, n=4 can get a good fit with error 0.0214,but for m=3, n=4 can not get a good fit and the erro is 16.8878)
+	
+	for any m:
+	when degree n is small, the ploynomial does not fit well, and the error is big
+	when degree n becomes very big, we cant see the change in error(for example,for m=3, n=100 and n=1000 both have error 2.6428e-08)
+
+	And the error between the interpolated y value and the ground-truth on X seems always smaller than the error between the interpolated y and the ground-truth on X_new.
+
+	If the n is big enough, the polynomial compare with the true sin function inbetween sample points is almost the same.
+	But the polynomial compare with the true sin function Outside the samples interval is quite different.
+	
+	
+Exercise 2: Fit a Polynomial along a brain tumor contour 
+	lab2e2.m
+
+	least squre error:
+	644.7900
+	
+	relative least squre error:
+	0.2857
